@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+Index
+
+{% endblock %}
+
+{% block main %}
+
+<table class="table table-striped" style = "width:100">
+    <tr>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Cost</th>
+    </tr>
+{% for disp in display %}
+    <tr>
+        <td>{{ disp.symbol }}</td>
+        <td>{{ disp.name }}</td>
+        <td>{{ disp.quantity }}</td>
+        <td>{{ disp.price }}</td>
+        <td>{{ disp.total }}</td>
+    </tr>
+{% endfor %}
+    <tr>
+        <td><b>BALANCE</b></td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td>{{ bal }}</td>
+    </tr>
+    <tr>
+        <td><b>GRAND TOTAL</b></td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td>{{ asset }}</td>
+    </tr>
+</table>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+Index
+
+{% endblock %}
+
+{% block main %}
+
+<table class="table table-striped" style = "width:100">
+    <caption style = text-align:center;><b>History</b></caption>
+    <tr>
+        <th>Symbol</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Transacted</th>
+    </tr>
+
+    {% for disp in display %}
+    <tr>
+        <td>{{ disp.Symbol }}</td>
+        <td>{{ disp.Quantity }}</td>
+        <td>{{ disp.Price }}</td>
+        <td>{{ disp.Transacted }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}
