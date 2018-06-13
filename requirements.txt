@@ -4,3 +4,4 @@ passlib
 SQLAlchemy
 gunicorn
 cs50
+psycopg2
