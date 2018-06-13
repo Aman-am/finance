@@ -82,3 +82,4 @@ WeasyPrint==0.42.3
 webencodings==0.5.1
 Werkzeug==0.12.2
 wrapt==1.10.11
+gunicorn
